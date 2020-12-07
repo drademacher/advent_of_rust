@@ -1,13 +1,19 @@
-pub fn result() -> String {
+pub fn solve() -> String {
     return format!("First part: {}\nSecond part: {}", part_one(), part_two());
 }
 
-fn part_one() -> usize {
-    let raw_input: &'static str = include_str!("day_01.txt");
-    let input: Vec<usize> = raw_input.lines().map(|s| s.parse::<usize>().unwrap()).collect();
+fn read_input_file() -> Vec<usize> {
+    return include_str!("day_01.txt")
+        .lines()
+        .map(|s| s.parse::<usize>().unwrap())
+        .collect();
+}
 
-    for n in &input {
-        for m in &input {
+fn part_one() -> usize {
+    let inputs = read_input_file();
+
+    for n in &inputs {
+        for m in &inputs {
             if n + m == 2020 {
                 return n * m;
             }
@@ -18,12 +24,11 @@ fn part_one() -> usize {
 }
 
 fn part_two() -> usize {
-    let raw_input: &'static str = include_str!("day_01.txt");
-    let input: Vec<usize> = raw_input.lines().map(|s| s.parse::<usize>().unwrap()).collect();
+    let inputs = read_input_file();
 
-    for n in &input {
-        for m in &input {
-            for k in &input {
+    for n in &inputs {
+        for m in &inputs {
+            for k in &inputs {
                 if n + m + k == 2020 {
                     return n * m * k;
                 }

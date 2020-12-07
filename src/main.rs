@@ -1,4 +1,5 @@
 mod day_01;
+mod day_02;
 
 use std::env;
 
@@ -7,7 +8,8 @@ fn main() {
     let day = args[1].parse::<usize>().expect("Invalid day number");
 
     match day {
-        1 => println!("{}", day_01::result()),
-        _ => println!("Invalid input")
+        1 => println!("{}", day_01::solve()),
+        2 => println!("{}", day_02::solve()),
+        _ => println!("Invalid input"),
     };
 }
