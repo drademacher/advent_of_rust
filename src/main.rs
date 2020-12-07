@@ -3,6 +3,7 @@ mod day_02;
 mod day_03;
 mod day_05;
 mod day_06;
+mod day_07;
 
 use std::env;
 
@@ -16,6 +17,7 @@ fn main() {
         3 => println!("{}", day_03::solve()),
         5 => println!("{}", day_05::solve()),
         6 => println!("{}", day_06::solve()),
+        7 => println!("{}", day_07::solve()),
         _ => println!("Invalid input"),
     };
 }
