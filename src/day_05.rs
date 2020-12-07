@@ -68,7 +68,7 @@ fn part_two() -> usize {
 }
 
 #[test]
-fn test_boardpass_example_one() {
+fn board_pass_1() {
     let board_pass = BoardPass::new("BFFFBBFRRR");
     assert_eq!(board_pass._row, 70);
     assert_eq!(board_pass._column, 7);
@@ -76,7 +76,7 @@ fn test_boardpass_example_one() {
 }
 
 #[test]
-fn test_boardpass_example_two() {
+fn board_pass_2() {
     let board_pass = BoardPass::new("FFFBBBFRRR");
     assert_eq!(board_pass._row, 14);
     assert_eq!(board_pass._column, 7);
@@ -84,7 +84,7 @@ fn test_boardpass_example_two() {
 }
 
 #[test]
-fn test_boardpass_example_three() {
+fn board_pass_3() {
     let board_pass = BoardPass::new("BBFFBBFRLL");
     assert_eq!(board_pass._row, 102);
     assert_eq!(board_pass._column, 4);
