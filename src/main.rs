@@ -8,6 +8,7 @@ mod day_07;
 mod day_08;
 mod day_09;
 mod day_10;
+mod day_12;
 mod day_15;
 
 use std::env;
@@ -27,6 +28,7 @@ fn main() {
         8 => println!("{}", day_08::solve()),
         9 => println!("{}", day_09::solve()),
         10 => println!("{}", day_10::solve()),
+        12 => println!("{}", day_12::solve()),
         15 => println!("{}", day_15::solve()),
         _ => println!("Invalid input"),
     };
