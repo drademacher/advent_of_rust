@@ -2,7 +2,6 @@
 name = "advent_of_rust"
 version = "1.0.0"
 authors = ["drademacher <danny.rademacher@gmail.com>"]
-path="src/2020"
 edition = "2021"
 publish = false
 
