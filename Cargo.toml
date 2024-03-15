@@ -1,10 +1,11 @@
 [package]
-name = "advent_of_code_2020"
-version = "0.1.0"
-authors = ["drademacher <danny.rademacher@senacor.com>"]
-edition = "2018"
+name = "advent_of_rust"
+version = "1.0.0"
+authors = ["drademacher <danny.rademacher@gmail.com>"]
+path="src/2020"
+edition = "2021"
+publish = false
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 regex = "1"
