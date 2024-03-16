@@ -27,6 +27,8 @@ Solutions for [Advent of Code](https://adventofcode.com/) in [Rust](https://www.
 | [Day 17](https://adventofcode.com/2023/day/17) | ⭐ | ⭐ |
 <!--- advent_readme_stars table 2023 --->
 
+<!--- advent_readme_stars table 2022 --->
+
 <!--- advent_readme_stars table 2021 --->
 ### 2021 Results
 
@@ -71,6 +73,8 @@ Solutions for [Advent of Code](https://adventofcode.com/) in [Rust](https://www.
 | [Day 15](https://adventofcode.com/2020/day/15) | ⭐ | ⭐ |
 <!--- advent_readme_stars table 2020 --->
 
+<!--- advent_readme_stars table 2019 --->
+
 <!--- advent_readme_stars table 2018 --->
 ### 2018 Results
 
@@ -91,6 +95,10 @@ Solutions for [Advent of Code](https://adventofcode.com/) in [Rust](https://www.
 | [Day 18](https://adventofcode.com/2018/day/18) | ⭐ | ⭐ |
 | [Day 19](https://adventofcode.com/2018/day/19) | ⭐ |   |
 <!--- advent_readme_stars table 2018 --->
+
+<!--- advent_readme_stars table 2017 --->
+
+<!--- advent_readme_stars table 2016 --->
 
 <!--- advent_readme_stars table 2015 --->
 ### 2015 Results

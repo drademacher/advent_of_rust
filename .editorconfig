@@ -1,7 +1,7 @@
 # EditorConfig is awesome: http://EditorConfig.org
 root = true
 
-[*]
+[*.rs]
 indent_size = 4
 indent_style = space
 end_of_line = lf
