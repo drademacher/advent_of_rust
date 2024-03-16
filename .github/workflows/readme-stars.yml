@@ -1,7 +1,7 @@
-name: Update README ⭐
+name: Show the table with all ⭐ from multiple years of advent of code
 on:
-#   schedule:
-#     - cron: "01 */4 * * *"  # Every 4 hours
+  schedule:
+    - cron: "20 4 * * *"
   workflow_dispatch:
 
 jobs:
