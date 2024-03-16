@@ -31,7 +31,7 @@ impl FromStr for Box {
 }
 
 fn read_input_file() -> Vec<Box> {
-    return include_str!("../../resources/2015/day_2.txt")
+    return include_str!("../../resources/day_2.txt")
         .lines()
         .map(|s| s.parse::<Box>().unwrap())
         .collect();

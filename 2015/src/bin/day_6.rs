@@ -77,7 +77,7 @@ mod tests {
 }
 
 fn read_input_file() -> Vec<Action> {
-    return include_str!("../../resources/2015/day_6.txt")
+    return include_str!("../../resources/day_6.txt")
         .lines()
         .map(|s| {
             s.parse::<Action>()

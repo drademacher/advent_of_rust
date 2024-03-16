@@ -12,7 +12,7 @@ fn main() {
 }
 
 fn read_input_file() -> &'static str {
-    return include_str!("../../resources/2015/day_12.txt");
+    return include_str!("../../resources/day_12.txt");
 }
 
 fn part_one(input: &'static str) -> i32 {

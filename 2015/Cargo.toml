@@ -1,7 +1,6 @@
 [package]
-name = "advent_of_rust"
-version = "1.0.0"
-authors = ["drademacher <danny.rademacher@gmail.com>"]
+name = "advent_of_rust_2015"
+version = "0.1.0"
 edition = "2021"
 publish = false
 

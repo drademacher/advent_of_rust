@@ -12,7 +12,7 @@ fn main() {
 struct Point(i32, i32);
 
 fn read_input_file() -> &'static str {
-    return include_str!("../../resources/2015/day_3.txt");
+    return include_str!("../../resources/day_3.txt");
 }
 
 fn part_one(input: &'static str) -> usize {

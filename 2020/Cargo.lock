@@ -3,7 +3,7 @@
 version = 3
 
 [[package]]
-name = "advent_of_rust"
+name = "advent_of_rust_2015"
 version = "1.0.0"
 dependencies = [
  "md-5",

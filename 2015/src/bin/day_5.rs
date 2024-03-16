@@ -7,7 +7,7 @@ fn main() {
 }
 
 fn read_input_file() -> Vec<&'static str> {
-    return include_str!("../../resources/2015/day_5.txt")
+    return include_str!("../../resources/day_5.txt")
         .lines()
         .collect::<Vec<&str>>();
 }

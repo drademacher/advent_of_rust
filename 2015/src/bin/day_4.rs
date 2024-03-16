@@ -9,7 +9,7 @@ fn main() {
 }
 
 fn read_input_file() -> &'static str {
-    return include_str!("../../resources/2015/day_4.txt")
+    return include_str!("../../resources/day_4.txt")
         .lines()
         .collect::<Vec<&str>>()[0];
 }
