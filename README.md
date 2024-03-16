@@ -4,6 +4,8 @@
 
 Solutions for [Advent of Code](https://adventofcode.com/) in [Rust](https://www.rust-lang.org/).
 
+## My current progress
+
 <!--- advent_readme_stars table 2015 --->
 ## 2015 Results
 
@@ -101,3 +103,5 @@ Solutions for [Advent of Code](https://adventofcode.com/) in [Rust](https://www.
 | [Day 15](https://adventofcode.com/2023/day/15) | ⭐ | ⭐ |
 | [Day 17](https://adventofcode.com/2023/day/17) | ⭐ | ⭐ |
 <!--- advent_readme_stars table 2023 --->
+
+<!--- advent_readme_stars table 2024 --->
