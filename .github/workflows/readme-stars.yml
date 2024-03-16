@@ -11,12 +11,41 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - uses: k2bd/advent-readme-stars@v1
+      - name: Put stars for 2015
+        uses: k2bd/advent-readme-stars@v1
         with:
           userId: 462798
-          leaderboardId: 637079
           sessionCookie: ${{ secrets.AOC_SESSION }}
           year: 2015
+          tableMarker: <!--- advent_readme_stars table 2015 --->
+      - name: Put stars for 2018
+        uses: k2bd/advent-readme-stars@v1
+        with:
+          userId: 462798
+          sessionCookie: ${{ secrets.AOC_SESSION }}
+          year: 2018
+          tableMarker: <!--- advent_readme_stars table 2018 --->
+      - name: Put stars for 2020
+        uses: k2bd/advent-readme-stars@v1
+        with:
+          userId: 462798
+          sessionCookie: ${{ secrets.AOC_SESSION }}
+          year: 2020
+          tableMarker: <!--- advent_readme_stars table 2020 --->
+      - name: Put stars for 2021
+        uses: k2bd/advent-readme-stars@v1
+        with:
+          userId: 462798
+          sessionCookie: ${{ secrets.AOC_SESSION }}
+          year: 2021
+          tableMarker: <!--- advent_readme_stars table 2021 --->
+      - name: Put stars for 2023
+        uses: k2bd/advent-readme-stars@v1
+        with:
+          userId: 462798
+          sessionCookie: ${{ secrets.AOC_SESSION }}
+          year: 2023
+          tableMarker: <!--- advent_readme_stars table 2023 --->
       - uses: stefanzweifel/git-auto-commit-action@v5 # use v5
         with:
           commit_message: Update README stars
