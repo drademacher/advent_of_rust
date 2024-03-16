@@ -1,21 +1,21 @@
 fn main() {
-    println!("First part: {}\nSecond part: {}", part_one(), part_two());
+    println!(
+        "First part: {}\nSecond part: {}",
+        part_one(read_input_file()),
+        part_two(read_input_file())
+    );
 }
 
-fn read_input_file() -> Vec<u32> {
-    return include_str!("day_01.txt")
-        .lines()
-        .map(|s| s.parse::<u32>().unwrap())
-   
-        .collect();
+fn read_input_file() -> &'static str {
+    return include_str!("../../resources/2015/day_1.txt");
 }
 
-pub fn part_one(input: &str) -> Option<u32> {
-    None
+fn part_one(input: &'static str) -> i32 {
+    return 0;
 }
 
-pub fn part_two(input: &str) -> Option<u32> {
-    None
+fn part_two(input: &'static str) -> u32 {
+    return 0;
 }
 
 #[cfg(test)]
@@ -24,13 +24,11 @@ mod tests {
 
     #[test]
     fn test_part_one() {
-        let result = part_one(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, None);
+        assert_eq!(part_one(""), );
     }
 
     #[test]
     fn test_part_two() {
-        let result = part_two(&advent_of_code::template::read_file("examples", DAY));
-        assert_eq!(result, None);
+        assert_eq!(part_two(""), );
     }
 }
