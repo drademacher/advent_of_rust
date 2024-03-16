@@ -9,97 +9,21 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    strategy:
+        matrix:
+          year: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
     steps:
       - uses: actions/checkout@v4
 
-      - name: Put stars for 2015
+      - name: Put stars for specific
         uses: k2bd/advent-readme-stars@v1
         with:
           userId: ${{ secrets.AOC_USERID }}
           sessionCookie: ${{ secrets.AOC_SESSION }}
-          year: 2015
+          year: ${{ matrix.year }}
           tableMarker: <!--- advent_readme_stars table 2015 --->
           headerPrefix: "###"
 
-      - name: Put stars for 2016
-        uses: k2bd/advent-readme-stars@v1
-        with:
-          userId: ${{ secrets.AOC_USERID }}
-          sessionCookie: ${{ secrets.AOC_SESSION }}
-          year: 2016
-          tableMarker: <!--- advent_readme_stars table 2016 --->
-          headerPrefix: "###"
-
-      - name: Put stars for 2017
-        uses: k2bd/advent-readme-stars@v1
-        with:
-          userId: ${{ secrets.AOC_USERID }}
-          sessionCookie: ${{ secrets.AOC_SESSION }}
-          year: 2017
-          tableMarker: <!--- advent_readme_stars table 2017 --->
-          headerPrefix: "###"
-
-      - name: Put stars for 2018
-        uses: k2bd/advent-readme-stars@v1
-        with:
-          userId: ${{ secrets.AOC_USERID }}
-          sessionCookie: ${{ secrets.AOC_SESSION }}
-          year: 2018
-          tableMarker: <!--- advent_readme_stars table 2018 --->
-          headerPrefix: "###"
-
-      - name: Put stars for 2019
-        uses: k2bd/advent-readme-stars@v1
-        with:
-          userId: ${{ secrets.AOC_USERID }}
-          sessionCookie: ${{ secrets.AOC_SESSION }}
-          year: 2019
-          tableMarker: <!--- advent_readme_stars table 2019 --->
-          headerPrefix: "###"
-
-      - name: Put stars for 2020
-        uses: k2bd/advent-readme-stars@v1
-        with:
-          userId: ${{ secrets.AOC_USERID }}
-          sessionCookie: ${{ secrets.AOC_SESSION }}
-          year: 2020
-          tableMarker: <!--- advent_readme_stars table 2020 --->
-          headerPrefix: "###"
-
-      - name: Put stars for 2021
-        uses: k2bd/advent-readme-stars@v1
-        with:
-          userId: ${{ secrets.AOC_USERID }}
-          sessionCookie: ${{ secrets.AOC_SESSION }}
-          year: 2021
-          tableMarker: <!--- advent_readme_stars table 2021 --->
-          headerPrefix: "###"
-
-      - name: Put stars for 2022
-        uses: k2bd/advent-readme-stars@v1
-        with:
-          userId: ${{ secrets.AOC_USERID }}
-          sessionCookie: ${{ secrets.AOC_SESSION }}
-          year: 2022
-          tableMarker: <!--- advent_readme_stars table 2022 --->
-          headerPrefix: "###"
-
-      - name: Put stars for 2023
-        uses: k2bd/advent-readme-stars@v1
-        with:
-          userId: ${{ secrets.AOC_USERID }}
-          sessionCookie: ${{ secrets.AOC_SESSION }}
-          year: 2023
-          tableMarker: <!--- advent_readme_stars table 2023 --->
-          headerPrefix: "###"
-    #   - name: Put stars for 2024
-    #     uses: k2bd/advent-readme-stars@v1
-    #     with:
-    #       userId: ${{ secrets.AOC_USERID }}
-    #       sessionCookie: ${{ secrets.AOC_SESSION }}
-    #       year: 2024
-    #       tableMarker: <!--- advent_readme_stars table 2024 --->
-    #       headerPrefix: "###"
       - uses: stefanzweifel/git-auto-commit-action@v5 # use v5
         with:
           commit_message: Update README stars
