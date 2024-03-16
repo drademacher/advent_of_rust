@@ -1,5 +1,5 @@
-pub fn solve() -> String {
-    return format!(
+fn main() {
+    println!(
         "First part: {}\nSecond part: {}",
         part_one(read_input_file(), 25).unwrap(),
         part_two(read_input_file(), 25)
@@ -7,7 +7,7 @@ pub fn solve() -> String {
 }
 
 fn read_input_file() -> Vec<usize> {
-    let inputs = include_str!("day_09.txt")
+    let inputs = include_str!("../../resources/day_9.txt")
         .lines()
         .map(|s| s.parse::<usize>().unwrap())
         .collect::<Vec<_>>();
@@ -67,7 +67,7 @@ fn part_two(inputs: Vec<usize>, preamble_length: usize) -> usize {
 }
 
 #[test]
-fn day_09_for_part_one() {
+fn day_9_for_part_one() {
     let test_input = vec![
         35, 20, 15, 25, 47, 40, 62, 55, 65, 95, 102, 117, 150, 182, 127, 219, 299, 277, 309, 576,
     ];

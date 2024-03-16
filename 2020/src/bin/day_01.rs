@@ -3,7 +3,7 @@ fn main() {
 }
 
 fn read_input_file() -> Vec<usize> {
-    return include_str!("day_01.txt")
+    return include_str!("../../resources/day_1.txt")
         .lines()
         .map(|s| s.parse::<usize>().unwrap())
         .collect();

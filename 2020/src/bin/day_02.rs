@@ -14,7 +14,7 @@ struct SingleInput {
 
 fn read_input_file() -> Vec<SingleInput> {
     let regex = Regex::new(r"(\d+)-(\d+) (\w+): (\w+)").unwrap();
-    let inputs: Vec<SingleInput> = include_str!("day_02.txt")
+    let inputs: Vec<SingleInput> = include_str!("../../resources/day_2.txt")
         .lines()
         .map(|s| regex.captures_iter(s).next().unwrap())
         .map(|cap| SingleInput {
