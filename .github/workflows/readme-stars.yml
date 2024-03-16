@@ -15,7 +15,7 @@ jobs:
       - name: Put stars for 2015
         uses: k2bd/advent-readme-stars@v1
         with:
-          userId: 462798
+          userId: ${{ secrets.AOC_USERID }}
           sessionCookie: ${{ secrets.AOC_SESSION }}
           year: 2015
           tableMarker: <!--- advent_readme_stars table 2015 --->
@@ -24,7 +24,7 @@ jobs:
       - name: Put stars for 2016
         uses: k2bd/advent-readme-stars@v1
         with:
-          userId: 462798
+          userId: ${{ secrets.AOC_USERID }}
           sessionCookie: ${{ secrets.AOC_SESSION }}
           year: 2016
           tableMarker: <!--- advent_readme_stars table 2016 --->
@@ -33,7 +33,7 @@ jobs:
       - name: Put stars for 2017
         uses: k2bd/advent-readme-stars@v1
         with:
-          userId: 462798
+          userId: ${{ secrets.AOC_USERID }}
           sessionCookie: ${{ secrets.AOC_SESSION }}
           year: 2017
           tableMarker: <!--- advent_readme_stars table 2017 --->
@@ -42,7 +42,7 @@ jobs:
       - name: Put stars for 2018
         uses: k2bd/advent-readme-stars@v1
         with:
-          userId: 462798
+          userId: ${{ secrets.AOC_USERID }}
           sessionCookie: ${{ secrets.AOC_SESSION }}
           year: 2018
           tableMarker: <!--- advent_readme_stars table 2018 --->
@@ -51,7 +51,7 @@ jobs:
       - name: Put stars for 2019
         uses: k2bd/advent-readme-stars@v1
         with:
-          userId: 462798
+          userId: ${{ secrets.AOC_USERID }}
           sessionCookie: ${{ secrets.AOC_SESSION }}
           year: 2019
           tableMarker: <!--- advent_readme_stars table 2019 --->
@@ -60,7 +60,7 @@ jobs:
       - name: Put stars for 2020
         uses: k2bd/advent-readme-stars@v1
         with:
-          userId: 462798
+          userId: ${{ secrets.AOC_USERID }}
           sessionCookie: ${{ secrets.AOC_SESSION }}
           year: 2020
           tableMarker: <!--- advent_readme_stars table 2020 --->
@@ -69,7 +69,7 @@ jobs:
       - name: Put stars for 2021
         uses: k2bd/advent-readme-stars@v1
         with:
-          userId: 462798
+          userId: ${{ secrets.AOC_USERID }}
           sessionCookie: ${{ secrets.AOC_SESSION }}
           year: 2021
           tableMarker: <!--- advent_readme_stars table 2021 --->
@@ -78,7 +78,7 @@ jobs:
       - name: Put stars for 2022
         uses: k2bd/advent-readme-stars@v1
         with:
-          userId: 462798
+          userId: ${{ secrets.AOC_USERID }}
           sessionCookie: ${{ secrets.AOC_SESSION }}
           year: 2022
           tableMarker: <!--- advent_readme_stars table 2022 --->
@@ -87,7 +87,7 @@ jobs:
       - name: Put stars for 2023
         uses: k2bd/advent-readme-stars@v1
         with:
-          userId: 462798
+          userId: ${{ secrets.AOC_USERID }}
           sessionCookie: ${{ secrets.AOC_SESSION }}
           year: 2023
           tableMarker: <!--- advent_readme_stars table 2023 --->
@@ -95,7 +95,7 @@ jobs:
     #   - name: Put stars for 2024
     #     uses: k2bd/advent-readme-stars@v1
     #     with:
-    #       userId: 462798
+    #       userId: ${{ secrets.AOC_USERID }}
     #       sessionCookie: ${{ secrets.AOC_SESSION }}
     #       year: 2024
     #       tableMarker: <!--- advent_readme_stars table 2024 --->
