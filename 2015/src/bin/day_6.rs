@@ -12,8 +12,70 @@ fn main() {
     );
 }
 
+fn read_input_file() -> Vec<Action> {
+    return include_str!("../../resources/day_6.txt")
+        .lines()
+        .map(|s| {
+            s.parse::<Action>()
+                .expect(format!("cant parse '{}'", s).as_str())
+        })
+        .collect();
+}
+
+#[derive(PartialEq, Debug)]
+struct Action(ActionType, usize, usize, usize, usize);
+
+impl FromStr for Action {
+    type Err = String;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        fn group_as_u32(captures: &regex::Captures<'_>, group_number: usize) -> usize {
+            captures
+                .get(group_number)
+                .unwrap()
+                .as_str()
+                .parse::<usize>()
+                .unwrap()
+        }
+
+        let regex =
+            Regex::new(r"(turn on|turn off|toggle) (\d+),(\d+) through (\d+),(\d+)").unwrap();
+        let captures = regex.captures(s).ok_or("Regex failed")?;
+
+        let action_type = captures.get(1).unwrap().as_str().parse::<ActionType>()?;
+
+        Ok(Action(
+            action_type,
+            group_as_u32(&captures, 2),
+            group_as_u32(&captures, 3),
+            group_as_u32(&captures, 4),
+            group_as_u32(&captures, 5),
+        ))
+    }
+}
+
+#[derive(PartialEq, Debug)]
+enum ActionType {
+    TurnOn,
+    TurnOff,
+    Toggle,
+}
+
+impl FromStr for ActionType {
+    type Err = String;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "turn on" => Ok(ActionType::TurnOn),
+            "turn off" => Ok(ActionType::TurnOff),
+            "toggle" => Ok(ActionType::Toggle),
+            _ => Err(format!("failed for {}", s)),
+        }
+    }
+}
+
 fn part_one(actions: Vec<Action>) -> u64 {
-    let mut map = [[false; 1000]; 1000];
+    let mut map = vec![vec![false; 1000]; 1000];
 
     for action in actions {
         for i in action.1..=action.3 {
@@ -28,13 +90,13 @@ fn part_one(actions: Vec<Action>) -> u64 {
     }
 
     return map
-        .map(|array| array.map(|b| b as u64).iter().sum())
         .iter()
+        .map(|v| v.iter().map(|&b| b as u64).sum::<u64>())
         .sum();
 }
 
 fn part_two(actions: Vec<Action>) -> u64 {
-    let mut map = [[0u64; 1000]; 1000];
+    let mut map = vec![vec![0u64; 1000]; 1000];
 
     for action in actions {
         for i in action.1..=action.3 {
@@ -66,79 +128,15 @@ mod tests {
     fn test_part_one() {
         assert_eq!(
             part_one(vec![Action(ActionType::TurnOn, 0, 0, 999, 999)]),
-            10000
+            1000000
         );
     }
 
     #[test]
     fn test_part_two() {
-        // assert_eq!(part_two(""), );
-    }
-}
-
-fn read_input_file() -> Vec<Action> {
-    return include_str!("../../resources/day_6.txt")
-        .lines()
-        .map(|s| {
-            s.parse::<Action>()
-                .expect(format!("cant parse '{}'", s).as_str())
-        })
-        .collect();
-}
-
-#[derive(PartialEq, Debug)]
-struct Action(ActionType, usize, usize, usize, usize);
-
-impl FromStr for Action {
-    type Err = String;
-
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let regex =
-            Regex::new(r"(turn on|turn off|toggle) (\d+),(\d+) through (\d+),(\d+)").unwrap();
-        let captures = regex.captures(s).ok_or("Regex failed")?;
-
-        let action_type = captures
-            .get(1)
-            .unwrap()
-            .as_str()
-            .parse::<ActionType>()
-            .expect("Failed");
-
-        Ok(Action(
-            action_type,
-            group_as_u32(&captures, 2),
-            group_as_u32(&captures, 3),
-            group_as_u32(&captures, 4),
-            group_as_u32(&captures, 5),
-        ))
-    }
-}
-
-fn group_as_u32(captures: &regex::Captures<'_>, group_number: usize) -> usize {
-    captures
-        .get(group_number)
-        .unwrap()
-        .as_str()
-        .parse::<usize>()
-        .unwrap()
-}
-
-#[derive(PartialEq, Debug)]
-enum ActionType {
-    TurnOn,
-    TurnOff,
-    Toggle,
-}
-
-impl FromStr for ActionType {
-    type Err = String;
-
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        match s {
-            "turn on" => Ok(ActionType::TurnOn),
-            "turn off" => Ok(ActionType::TurnOff),
-            "toggle" => Ok(ActionType::Toggle),
-            _ => Err(format!("failed for {}", s)),
-        }
+        assert_eq!(
+            part_two(vec![Action(ActionType::Toggle, 0, 0, 999, 999)]),
+            2000000
+        );
     }
 }
