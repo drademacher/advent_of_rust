@@ -23,6 +23,11 @@ Solutions for [Advent of Code](https://adventofcode.com/) in [Rust](https://www.
 <!--- advent_readme_stars table 2017 --->
 
 <!--- advent_readme_stars table 2016 --->
+### 2016 Results
+
+| Day | Part 1 | Part 2 |
+| :---: | :---: | :---: |
+<!--- advent_readme_stars table 2016 --->
 
 <!--- advent_readme_stars table 2015 --->
 ### 2015 Results
