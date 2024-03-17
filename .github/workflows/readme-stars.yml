@@ -22,9 +22,9 @@ jobs:
           userId: ${{ secrets.AOC_USERID }}
           sessionCookie: ${{ secrets.AOC_SESSION }}
           year: ${{ matrix.year }}
-          tableMarker: <!--- advent_readme_stars table ${{ matrix.year }} --->
+          tableMarker: "<!--- advent_readme_stars table ${{ matrix.year }} --->"
           headerPrefix: "###"
 
       - uses: stefanzweifel/git-auto-commit-action@v5 # use v5
         with:
-          commit_message: Update README stars
+          commit_message: "Update README: Display ⭐ for year ${{ matrix.year }}"
