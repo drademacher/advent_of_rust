@@ -1,8 +1,5 @@
 name: Display all AoC ⭐
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
