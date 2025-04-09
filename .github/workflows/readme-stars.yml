@@ -93,14 +93,14 @@ jobs:
           tableMarker: <!--- advent_readme_stars table 2023 --->
           headerPrefix: "###"
 
-    #   - name: Update stars for 2024
-    #     uses: k2bd/advent-readme-stars@v1
-    #     with:
-    #       userId: ${{ secrets.AOC_USERID }}
-    #       sessionCookie: ${{ secrets.AOC_SESSION }}
-    #       year: 2024
-    #       tableMarker: <!--- advent_readme_stars table 2024 --->
-    #       headerPrefix: "###"
+      - name: Update stars for 2024
+        uses: k2bd/advent-readme-stars@v1
+        with:
+          userId: ${{ secrets.AOC_USERID }}
+          sessionCookie: ${{ secrets.AOC_SESSION }}
+          year: 2024
+          tableMarker: <!--- advent_readme_stars table 2024 --->
+          headerPrefix: "###"
 
       - uses: stefanzweifel/git-auto-commit-action@v5 # use v5
         with:
