@@ -9,15 +9,15 @@ fn main() {
 }
 
 fn read_input_file() -> &'static str {
-    return include_str!("../../resources/day_1.txt");
+    include_str!("../../resources/day_1.txt")
 }
 
 fn part_one(input: &'static str) -> i32 {
-    return 0;
+    0
 }
 
-fn part_two(input: &'static str) -> u32 {
-    return 0;
+fn part_two(input: &'static str) -> i32 {
+    0
 }
 
 #[cfg(test)]

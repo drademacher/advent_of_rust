@@ -133,3 +133,8 @@ Solutions for [Advent of Code](https://adventofcode.com/) in [Rust](https://www.
 | [Day 6](https://adventofcode.com/2015/day/6) | ⭐ | ⭐ |
 | [Day 12](https://adventofcode.com/2015/day/12) | ⭐ |   |
 <!--- advent_readme_stars table 2015 --->
+
+
+## Get all date files via curl
+
+for i in {1..25}; do curl -H "Cookie: session=SESSION_COOKIE" "https://adventofcode.com/2024/day/$i/input" -o day_$i.txt; done

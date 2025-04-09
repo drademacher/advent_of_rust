@@ -1,7 +1,8 @@
 name: Display all AoC ⭐
 on:
-  # schedule:
-  #   - cron: "20 4 * * *"
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
