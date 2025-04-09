@@ -141,6 +141,6 @@ Solutions for [Advent of Code](https://adventofcode.com/) in [Rust](https://www.
 <!--- advent_readme_stars table 2015 --->
 
 
-## Get all date files via curl
+## Get all input files via curl
 
 for i in {1..25}; do curl -H "Cookie: session=SESSION_COOKIE" "https://adventofcode.com/2024/day/$i/input" -o day_$i.txt; done

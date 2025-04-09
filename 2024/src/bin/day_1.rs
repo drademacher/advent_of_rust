@@ -17,7 +17,8 @@ fn part_one(input: &'static str) -> i32 {
     list_left.sort();
     list_right.sort();
 
-    list_left.iter()
+    list_left
+        .iter()
         .zip(list_right.iter())
         .map(|(a, b)| (a - b).abs())
         .sum()
@@ -26,7 +27,8 @@ fn part_one(input: &'static str) -> i32 {
 fn part_two(input: &'static str) -> i32 {
     let (list_left, list_right) = transform_input(input);
 
-    list_left.iter()
+    list_left
+        .iter()
         .map(|number| {
             let occurrences = list_right.iter().filter(|&&x| x == *number).count() as i32;
             number * occurrences
@@ -38,7 +40,10 @@ fn transform_input(input: &str) -> (Vec<i32>, Vec<i32>) {
     input
         .lines()
         .map(|line| {
-            let numbers: Vec<i32> = line.split_whitespace().filter_map(|s| s.parse().ok()).collect();
+            let numbers: Vec<i32> = line
+                .split_whitespace()
+                .filter_map(|s| s.parse().ok())
+                .collect();
             (numbers[0], numbers[1])
         })
         .unzip()
